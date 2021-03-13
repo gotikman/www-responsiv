@@ -1,0 +1,195 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+/* _______________ */
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1220px; /* задаєм макс. при адаптиві щоб зменшувалася */
+    padding: 0 10px; /* добавили відступи до макс.шир */
+    margin: 0 auto; /* центруєм блок-контейнер */
+}
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 400;
+    font-size: 16px; /*  загальний шрифт тексту з макету */
+    line-height: 19px; /*  загальна висота строки з макету */
+    color: #1b1818; /*  загальний колір тексту з макету */
+    /* font-family: 'Fira Sans', sans-serif; */
+}
+
+.header {
+    background-color: #332208; /* колір фону шапки  */
+}
+
+.header__inner {
+    /*  флексами розміщую елементи футера */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.menu__list {
+    /* флексами елементи меню розприділяю */
+    display: flex;
+}
+.menu__item {
+    margin: 0 15px; /* задав відступи між елементами */
+}
+.menu__list-link {
+    text-transform: uppercase;
+    color: #fefefe;
+    font-style: 18px;
+    line-height: 21;
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent; /* створюю прозору лінію для транс. */
+    transition: all 0.5s; /* роблю появу лінії знизу плавною */
+}
+.phone {
+    color: #fefefe;
+    font-style: 18px;
+    line-height: 21;
+}
+.menu__list-link:hover {
+    border-bottom: 1px solid #fefefe;
+}
+
+/* ___________________________ */
+
+.top__heading {
+    display: flex;
+    padding: 50px 0 30px;
+}
+
+.top__content {
+    text-align: center;
+    padding-top: 90px;
+    width: 50%;
+}
+
+.top__title {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 58px;
+    margin: 0 auto 20px;
+    max-width: 455px;
+}
+
+.top__text {
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0 auto 60px;
+    max-width: 470px;
+}
+
+.application-btn {
+    text-transform: uppercase;
+    color: #fefefe;
+    background-color: #c5ac2d;
+    padding: 16px 19px 15px;
+    border: 1px solid transparent; /* Добавляю для переходу */
+    transition: all 0.5s;
+}
+
+.application-btn:hover {
+    color: #c5ac2d;
+    background-color: #fefefe;
+    border: 1px solid #c5ac2d;
+}
+
+/* 2. ставим дотси на місце https://prnt.sc/10kmrvs*/
+.top__slider .slick-dots {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.top__slider {
+    width: 50%;
+}
+/* 1. прибираєм та модифікуєм дотси https://prnt.sc/10kmrvs */
+.slick-dots {
+    list-style: none;
+    text-align: center;
+}
+.slick-dots button {
+    font-size: 0;
+    width: 8px;
+    height: 8px;
+    background-color: #332208;
+    border: none;
+    border-radius: 50%;
+    padding: 0mm;
+}
+/* збільшуєм вибраний дотс */
+.slick-active button {
+    width: 16px;
+    height: 16px;
+}
+
+/* ____ */
+.top__slider-text {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500;
+    padding-right: 100px;
+    text-align: right;
+}
+
+.top__slider-text span + span {
+    padding-left: 12px;
+}
+/* ___________________ */
+
+.top__bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.top__items {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.top__item {
+    border: 1px solid #1b1818;
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: all 0.5s; /* роблю збільшення плавним */
+}
+.top__item:hover {
+    transform: scale(1.25); /* збільшую іконки при наведенні мишки */
+}
+
+.top__links {
+    padding-right: 80px;
+}
+
+.top__link {
+    color: #1b1818;
+    border-bottom: 1px solid #1b1818;
+}
+/* відстань між елементами */
+.top__link + .top__link {
+    margin-left: 20px;
+}
