@@ -32,32 +32,32 @@ body {
 }
 
 .header__inner {
-    /*  флексами розміщую елементи футера */
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100px;
 }
+
 .menu__list {
-    /* флексами елементи меню розприділяю */
     display: flex;
 }
+
 .menu__item {
-    margin: 0 15px; /* задав відступи між елементами */
+    margin: 0 015px;
 }
 .menu__list-link {
     text-transform: uppercase;
     color: #fefefe;
     font-style: 18px;
-    line-height: 21;
+    line-height: 21px;
     padding-bottom: 5px;
     border-bottom: 1px solid transparent; /* створюю прозору лінію для транс. */
     transition: all 0.5s; /* роблю появу лінії знизу плавною */
 }
 .phone {
     color: #fefefe;
-    font-style: 18px;
-    line-height: 21;
+    font-size: 18px;
+    line-height: 21px;
 }
 .menu__list-link:hover {
     border-bottom: 1px solid #fefefe;
@@ -65,9 +65,9 @@ body {
 
 /* ____________TOP_______________ */
 
-.top {
-    padding: 100px;
-}
+/* .top {
+    padding: 100px 0;
+} */
 
 .top__heading {
     display: flex;
@@ -103,6 +103,7 @@ body {
     padding: 16px 19px 15px;
     border: 1px solid transparent; /* Добавляю для переходу */
     transition: all 0.5s;
+    display: inline-block;
 }
 
 .application-btn:hover {
@@ -254,4 +255,228 @@ body {
     font-size: 18px;
     line-height: 22px;
     margin-bottom: auto; /* всіх відштовхне, а сам прилипає */
+}
+/* ____________BENEFITS________________ */
+
+.benefits {
+    padding: 100px 0;
+}
+.benefits__title {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 50px;
+}
+.benefits__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.benefits__list {
+    width: 300px;
+    list-style: none;
+}
+.benefits__list-item {
+    margin-bottom: 27px;
+    padding-right: 26px;
+    position: relative;
+    text-align: right;
+}
+.benefits__list-item::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #332208;
+    right: 0;
+    top: 3px;
+}
+
+.benefits__list-item:nth-child(1),
+.benefits__list-item:nth-child(7) {
+    margin-right: 10px;
+}
+.benefits__list-item:nth-child(2),
+.benefits__list-item:nth-child(6) {
+    margin-right: 60px;
+}
+.benefits__list-item:nth-child(3),
+.benefits__list-item:nth-child(5) {
+    margin-right: 110px;
+}
+.benefits__list-item:nth-child(4) {
+    margin-right: 155px;
+}
+
+.benfits__content {
+    width: 300px;
+    text-align: right;
+}
+
+.benefits__text {
+    margin-bottom: 30px;
+    text-align: right;
+}
+.benefits__text + .benefits__text {
+    width: 267px;
+    margin-left: auto; /* притискаєм до правого краю */
+}
+
+.video-popup {
+    background-color: #c5ac2d;
+    text-transform: uppercase;
+    color: #fefefe;
+    padding: 6px 34px 6px 64px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+}
+
+.video-popup::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-image: url("../images/video-btn.svg");
+    top: 12px;
+    left: 34px;
+}
+
+/* ________REVIEWS___________ */
+
+.reviews {
+    padding: 100px 0;
+    background-color: #332208;
+    color: #fefefe;
+}
+.reviews__title {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 70px;
+}
+
+.slick-initialized .reviws__item {
+    display: flex;
+}
+
+.reviws__item {
+    border: 1px solid #c5ac2d;
+    padding: 45px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 270px;
+    min-height: 300px;
+    text-align: center;
+    margin-right: 30px;
+}
+.reviews__item-name {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.reviews__slider .slick-dots button {
+    background-color: #c5ac2d;
+}
+.reviews__slider .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+.reviews__slider button {
+    margin: 0 5px;
+    line-height: 12px;
+}
+
+.feedback {
+    padding: 100px 0;
+}
+.feedback__inner {
+    display: flex;
+    align-items: center;
+}
+.feedback__images {
+    width: 50%;
+}
+.feedback__form {
+    width: 415px;
+    margin: 0 auto;
+}
+.feedback__title {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 5px;
+}
+.feedback__text {
+    margin-bottom: 30px;
+}
+.feedback__input {
+    display: block;
+    padding: 20px 5px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* miнєм стиль написів в плейсхолдері */
+.feedback__input::placeholder {
+    line-height: 19px;
+    font-size: 16px;
+    color: #1b1b1b;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 400;
+}
+
+.feedback__bnt {
+    text-transform: uppercase;
+    color: #fefefe;
+    border: 1px solid transparent;
+    display: inline-block;
+    padding: 16px 36px 15px;
+    background-color: #c5ac2d;
+    margin-top: 50px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.feedback__bnt:hover {
+    background-color: #fefefe;
+    color: #c5ac2d;
+    border: 1px solid #c5ac2d;
+}
+
+/* ___________FOOTER_________ */
+
+.footer {
+    padding: 100px 0 24px;
+    background-color: #332208;
+}
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 21px;
+}
+
+.footer__social {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mfooter__social-link {
+    margin: 0 15px;
 }
