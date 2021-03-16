@@ -554,6 +554,7 @@ body {
     .menu {
         order: 1; /* зміщую значок бургера правіше */
     }
+
     .menu__list {
         display: block;
         position: absolute;
