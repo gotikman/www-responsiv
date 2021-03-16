@@ -48,7 +48,7 @@ body {
 .menu__list-link {
     text-transform: uppercase;
     color: #fefefe;
-    font-style: 18px;
+    font-size: 18px;
     line-height: 21px;
     padding-bottom: 5px;
     border-bottom: 1px solid transparent; /* створюю прозору лінію для транс. */
